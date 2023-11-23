@@ -1,5 +1,5 @@
 import { Link } from "gatsby";
-import React, { ReactElement, ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 interface ILayoutProps {
   children: ReactNode;
