@@ -1,7 +1,7 @@
 import * as React from "react";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
-import { PageProps, graphql } from "gatsby";
+import { Link, PageProps, graphql } from "gatsby";
 
 export default function IndexPage({
   data,
@@ -14,7 +14,9 @@ export default function IndexPage({
       <section>
         {data.allMdx.nodes.map((post, index) => (
           <article>
-            <h3>{post.frontmatter?.title}</h3>
+            <Link to={`/${post.frontmatter?.slug}`}>
+              <h3>{post.frontmatter?.title}</h3>
+            </Link>
             <span>Using {post.frontmatter?.tech_stack}</span>
           </article>
         ))}
@@ -35,6 +37,7 @@ export const query = graphql`
           lecture
           date
           author
+          slug
         }
         excerpt
       }
