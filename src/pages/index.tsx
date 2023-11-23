@@ -8,7 +8,7 @@ export default function IndexPage({
 }: PageProps<Queries.GithubPostsQuery>) {
   console.log(data);
   return (
-    <Layout title="HOME">
+    <Layout title="">
       <h1>Hello! This is Jeong ChaeKyeong's Portfolio Site.</h1>
       <h2>My Works</h2>
       <section>
