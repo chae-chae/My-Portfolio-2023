@@ -16,7 +16,7 @@ export default function GithubPost({ data, children }: IGithubPostProps) {
   console.log(image);
   return (
     <Layout title="">
-      {/* <GatsbyImage image={image as any} alt={data.mdx?.frontmatter?.title!} /> */}
+      <GatsbyImage image={image as any} alt={data.mdx?.frontmatter?.title!} />
       <div>{children}</div>
     </Layout>
   );
@@ -26,15 +26,16 @@ export const query = graphql`
   query PostDetail($frontmatter__slug: String) {
     mdx(frontmatter: { slug: { eq: $frontmatter__slug } }) {
       frontmatter {
-        title
-        tech_stack
-        lecture
-        date
         author
+        date
+        lecture
         slug
+        order
+        tech_stack
+        title
         headerImage {
           childImageSharp {
-            gatsbyImageData(height: 450)
+            gatsbyImageData(height: 500)
           }
         }
       }
