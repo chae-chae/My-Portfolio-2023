@@ -29,7 +29,7 @@ export const Head = () => <Seo title="Home" />;
 
 export const query = graphql`
   query GithubPosts {
-    allMdx {
+    allMdx(sort: { frontmatter: { order: ASC } }) {
       nodes {
         frontmatter {
           title
