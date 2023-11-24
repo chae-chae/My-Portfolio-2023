@@ -16,7 +16,7 @@ export default function GithubPost({ data, children }: IGithubPostProps) {
   console.log(image);
   return (
     <Layout title="">
-      <GatsbyImage image={image as any} alt={data.mdx?.frontmatter?.title!} />
+      {/* <GatsbyImage image={image as any} alt={data.mdx?.frontmatter?.title!} /> */}
       <div>{children}</div>
     </Layout>
   );
@@ -34,7 +34,7 @@ export const query = graphql`
         slug
         headerImage {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(height: 450)
           }
         }
       }
