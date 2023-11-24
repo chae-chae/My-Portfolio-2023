@@ -33,11 +33,11 @@ export const query = graphql`
         order
         tech_stack
         title
-        headerImage {
-          childImageSharp {
-            gatsbyImageData(height: 500)
-          }
-        }
+        # headerImage {
+        #   childImageSharp {
+        #     gatsbyImageData(height: 500)
+        #   }
+        # }
       }
     }
   }
