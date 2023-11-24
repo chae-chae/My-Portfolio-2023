@@ -28,16 +28,16 @@ export const query = graphql`
       frontmatter {
         author
         date
+        headerImage {
+          childImageSharp {
+            gatsbyImageData(height: 400)
+          }
+        }
         lecture
-        slug
         order
         tech_stack
+        slug
         title
-        # headerImage {
-        #   childImageSharp {
-        #     gatsbyImageData(height: 500)
-        #   }
-        # }
       }
     }
   }
